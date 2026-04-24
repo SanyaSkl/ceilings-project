@@ -1,0 +1,25 @@
+.logo {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    margin:  50px ;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    background-color: aqua;
+    height: 60px;
+}
+
+.textHeader {
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px red;
+}
+
+
