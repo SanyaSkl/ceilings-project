@@ -1,20 +1,22 @@
-import classes from "./TypesCellings.module.css";
+import s from "./TypesCellings.module.css";
 import glHall from "../../../assets/Images/glossy/glHall.jpg"
-import glBedroom from "../../../assets/Images/glossy/glBedroom.jpg";
-import glHallway from "../../../assets/Images/glossy/glHallway.jpg";
-import glKitchen from "../../../assets/Images/glossy/glKitchen.jpg";
+import glBedroom from "../../../assets/Images/glossy/glBedroom.jpg"
+import glHallway from "../../../assets/Images/glossy/glHallway.jpg"
+import glKitchen from "../../../assets/Images/glossy/glKitchen.jpg"
 
-const Glossy = () => {
+
+
+export const Glossy = () => {
 
     return (
-        <div className={classes.ceilingViewsContainer}>
-            <div className={classes.ceilingViewTextContainer}>
-                <h1 className={classes.ceilingTypeHeader}>Глянцевые натяжные потолки</h1>
+        <div className={s.ceilingViewsContainer}>
+            <div className={s.ceilingViewTextContainer}>
+                <h1 className={s.ceilingTypeHeader}>Глянцевые натяжные потолки</h1>
                 <br/>
                 <h3>Глянцевые полотна — одни из самых популярных видов натяжных потолков.
                     Благодаря своей лаковой поверхности, обладают ярко выраженным светоотражающим эффектом.</h3>
                 <br/>
-                <p className={classes.descriptionText}>Идеально ровная зеркальная поверхность,
+                <p className={s.descriptionText}>Идеально ровная зеркальная поверхность,
                     отличное отражение и рассеивание света: все это глянцевые натяжные потолки.
                     Они отлично подходят для помещений с низким черновым потолком,
                     визуально увеличивая пространство, а также будут лучшим выбором там,
@@ -31,9 +33,9 @@ const Glossy = () => {
             </div>
             <br/>
             <div>
-                <div className={classes.cardsWrap}>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={glHall} alt={"glHall"}/>
+                <div className={s.cardsWrap}>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={glHall} alt={"glHall"}/>
                         <h3>Глянцевый натяжной потолок в зале</h3>
                         <p>площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м;
                             заготовка под люстру и установка люстры - 1 шт.; цвет - белый;
@@ -41,24 +43,24 @@ const Glossy = () => {
                         <br/>
                         <h4>Общая стоимость: 8500 руб.</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={glBedroom} alt={"glBedroom"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={glBedroom} alt={"glBedroom"}/>
                         <h3>Глянцевый натяжной потолок в спальне</h3>
                         <p>площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м;
                             заготовка под люстру и установка люстры - 1 шт.; цвет - белый;</p>
                         <br/>
                         <h4>Общая стоимость: 6500 руб.</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={glHallway} alt={"glHallway"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={glHallway} alt={"glHallway"}/>
                         <h3>Глянцевый натяжной потолок в коридоре</h3>
                         <p>площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м;
                             установка точечных светильников - 4 шт.; цвет - белый;</p>
                         <br/>
                         <h4>Общая стоимость: 6000 </h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={glKitchen} alt={"glKitchen"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={glKitchen} alt={"glKitchen"}/>
                         <h3>Глянцевый натяжной потолок в кухне</h3>
                         <p>площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м;
                             заготовка под люстру и установка люстры - 1 шт.;
@@ -71,6 +73,3 @@ const Glossy = () => {
         </div>
     )
 }
-
-
-export default Glossy

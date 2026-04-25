@@ -1,19 +1,19 @@
-import classes from "./TypesCellings.module.css"
-import matHall from "./../../../assets/Images/matte/matHall.jpg"
-import matBedroom from "./../../../assets/Images/matte/matBedroom.jpg"
-import matHallway from "./../../../assets/Images/matte/matHallway.jpg"
-import matKitchen from "./../../../assets/Images/matte/matKitchen.jpg"
+import s from "./TypesCellings.module.css"
+import matHall from "../../../assets/Images/matte/matHall.jpg"
+import matBedroom from "../../../assets/Images/matte/matBedroom.jpg"
+import matHallway from "../../../assets/Images/matte/matHallway.jpg"
+import matKitchen from "../../../assets/Images/matte/matKitchen.jpg"
 
-const Matte = () => {
+export const Matte = () => {
     return (
-        <div className={classes.ceilingViewsContainer}>
-            <div className={classes.ceilingViewTextContainer}>
-                <h1 className={classes.ceilingTypeHeader}>Матовые натяжные потолки</h1>
+        <div className={s.ceilingViewsContainer}>
+            <div className={s.ceilingViewTextContainer}>
+                <h1 className={s.ceilingTypeHeader}>Матовые натяжные потолки</h1>
                 <br/>
                 <h3>Матовые потолки внешне похожи на традиционные побеленные потолки без бликов.
                     Благодаря своей нейтральности, легко вписываются в любой интерьер.</h3>
                 <br/>
-                <div className={classes.descriptionText}>
+                <div className={s.descriptionText}>
                     <p>     До появления ПВХ пленок все привыкли, что потолок бывает или крашеный, или побеленный.
                         Их внешний вид отличается несильно. Поэтому многие заказчики хотели бы,
                         чтоб их новый потолок выглядел «по-привычному».</p>
@@ -36,9 +36,9 @@ const Matte = () => {
             </div>
             <br/>
             <div>
-                <div className={classes.cardsWrap}>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={matHall} alt={"matHall"}/>
+                <div className={s.cardsWrap}>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={matHall} alt={"matHall"}/>
                         <h3>Матовый натяжной потолок в зале</h3>
                         <p>площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м;
                             заготовка под люстру и установка люстры - 1 шт.; цвет - белый;
@@ -46,24 +46,24 @@ const Matte = () => {
                         <br/>
                         <h4>Общая стоимость: 8500 руб.</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={matBedroom} alt={"matBedroom"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={matBedroom} alt={"matBedroom"}/>
                         <h3>Матовый натяжной потолок в спальне</h3>
                         <p>площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м;
                             заготовка под люстру и установка люстры - 1 шт.; цвет - белый;</p>
                         <br/>
                         <h4>Общая стоимость: 6500 руб.</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={matHallway} alt={"matHallway"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={matHallway} alt={"matHallway"}/>
                         <h3>Матовый натяжной потолок в коридоре</h3>
                         <p>площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м;
                             установка точечных светильников - 4 шт.; цвет - белый;</p>
                         <br/>
                         <h4>Общая стоимость: 6000 </h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={matKitchen} alt={"matKitchen"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={matKitchen} alt={"matKitchen"}/>
                         <h3>Матовый натяжной потолок в кухне</h3>
                         <p>площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м;
                             заготовка под люстру и установка люстры - 1 шт.;
@@ -76,6 +76,3 @@ const Matte = () => {
         </div>
     )
 }
-
-
-export default Matte;

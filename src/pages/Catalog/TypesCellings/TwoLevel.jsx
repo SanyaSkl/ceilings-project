@@ -1,20 +1,19 @@
-import classes from "./TypesCellings.module.css";
-import twoLevHall from "../../../assets/Images/two-level/twoLevHall.jpg";
-import twoLevBedroom from "../../../assets/Images/two-level/twoLevBedroom.jpg";
-import twoLevHallway from "../../../assets/Images/two-level/twoLevHallway.jpg";
-import twoLevKitchen from "../../../assets/Images/two-level/twoLevKitchen.jpg";
+import s from "./TypesCellings.module.css";
+import twoLevHall from "../../../assets/Images/two-level/twoLevHall.jpg"
+import twoLevBedroom from "../../../assets/Images/two-level/twoLevBedroom.jpg"
+import twoLevHallway from "../../../assets/Images/two-level/twoLevHallway.jpg"
+import twoLevKitchen from "../../../assets/Images/two-level/twoLevKitchen.jpg"
 
-
-const TwoLevel = () => {
+export const TwoLevel = () => {
     return (
-        <div className={classes.ceilingViewsContainer}>
-            <div className={classes.ceilingViewTextContainer}>
-                <h1 className={classes.ceilingTypeHeader}>Двухуровневые натяжные потолки</h1>
+        <div className={s.ceilingViewsContainer}>
+            <div className={s.ceilingViewTextContainer}>
+                <h1 className={s.ceilingTypeHeader}>Двухуровневые натяжные потолки</h1>
                 <br/>
                 <h3>Сложные дизайнерские конструкции позволят скрыть дефекты основания и видимые элементы коммуникаций,
                     при этом расставив в интерьере правильные акценты.</h3>
                 <br/>
-                <p className={classes.descriptionText}>
+                <p className={s.descriptionText}>
                     Это конструкция, состоящая из двух уровней, выполнена из пленок и специальных алюминиевых профилей,
                     которым придают любую форму. Отлично смотрится в помещении с высокими потолками.
                     Подобная конструкция выделит отдельные зоны, акцентирует внимание на освещении.
@@ -38,9 +37,9 @@ const TwoLevel = () => {
             </div>
             <br/>
             <div>
-                <div className={classes.cardsWrap}>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={twoLevHall} alt={"twoLevHall"}/>
+                <div className={s.cardsWrap}>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={twoLevHall} alt={"twoLevHall"}/>
                         <h3>Двухуровневый натяжной потолок в зале</h3>
                         <p>площадь - 19 м2; обработка угла - 4 шт; профиль - 18 м; длина второго уровня - 12 м.п;
                             заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 8 шт;
@@ -48,8 +47,8 @@ const TwoLevel = () => {
                         <br/>
                         <h4>Общая стоимость: 27400 руб.</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={twoLevBedroom} alt={"twoLevBedroom"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={twoLevBedroom} alt={"twoLevBedroom"}/>
                         <h3>Двухуровневый натяжной потолок в спальне</h3>
                         <p>площадь - 11 м2; обработка угла - 4 шт; профиль - 13 м; длина второго уровня - 6.5 м.п;
                             заготовка под люстру и установка люстры - 1 шт; установка точечных светильников - 10 шт;
@@ -57,16 +56,16 @@ const TwoLevel = () => {
                         <br/>
                         <h4>Общая стоимость: 17850 руб.</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={twoLevHallway} alt={"twoLevHallway"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={twoLevHallway} alt={"twoLevHallway"}/>
                         <h3>Двухуровневый натяжной потолок в коридоре</h3>
                         <p>площадь - 6.3 м2; обработка угла - 8 шт; профиль - 12 м; длина второго уровня - 5.5 м.п;
                             установка точечных светильников - 6 шт; цвет - белый/белый;</p>
                         <br/>
                         <h4>Общая стоимость: 13500 </h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={twoLevKitchen} alt={"twoLevKitchen"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={twoLevKitchen} alt={"twoLevKitchen"}/>
                         <h3>Двухуровневый натяжной потолок в кухне</h3>
                         <p>площадь - 12 м2; обработка угла - 8 шт.; профиль - 11.6 м; длина второго уровня - 4 м.п;
                             заготовка под люстру и установка люстры - 1 шт.;
@@ -79,5 +78,3 @@ const TwoLevel = () => {
         </div>
     )
 }
-
-export default TwoLevel

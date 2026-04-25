@@ -1,20 +1,19 @@
-import classes from "./TypesCellings.module.css";
-import lightLiHall from "../../../assets/Images/light lines/lightLiHall.jpg";
-import lightLiBedroom from "../../../assets/Images/light lines/lightLiBedroom.jpg";
-import lightLiHallway from "../../../assets/Images/light lines/lightLiHallway.jpg";
-import lightLiKitchen from "../../../assets/Images/light lines/lightLiKitchen.jpg";
+import s from "./TypesCellings.module.css";
+import lightLiHall from "../../../assets/Images/light lines/lightLiHall.jpg"
+import lightLiBedroom from "../../../assets/Images/light lines/lightLiBedroom.jpg"
+import lightLiHallway from "../../../assets/Images/light lines/lightLiHallway.jpg"
+import lightLiKitchen from "../../../assets/Images/light lines/lightLiKitchen.jpg"
 
-
-const LightLines = () => {
+export const LightLines = () => {
     return (
-        <div className={classes.ceilingViewsContainer}>
-            <div className={classes.ceilingViewTextContainer}>
-                <h1 className={classes.ceilingTypeHeader}>Световые линии</h1>
+        <div className={s.ceilingViewsContainer}>
+            <div className={s.ceilingViewTextContainer}>
+                <h1 className={s.ceilingTypeHeader}>Световые линии</h1>
                 <br/>
                 <h3>Натяжные потолки со световыми линиями – это новое течение в дизайне интерьера помещений,
                     можно декорировать светящимися полосами комнаты любой формы и размера.</h3>
                 <br/>
-                <p className={classes.descriptionText}>
+                <p className={s.descriptionText}>
                     <h3>Световые линии для натяжных потолков</h3>
                     Использование при обустройстве натяжных потолков световых линий является реальным способом
                     повысить визуальную привлекательность покрытия, выделить периметр помещения.
@@ -59,9 +58,9 @@ const LightLines = () => {
             </div>
             <br/>
             <div>
-                <div className={classes.cardsWrap}>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={lightLiHall} alt={"lightLiHall"}/>
+                <div className={s.cardsWrap}>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={lightLiHall} alt={"lightLiHall"}/>
                         <h3>Световые линии в зале</h3>
                         <p>Считается индивидуально, цена зависит от длины линий, ширины линий, колличества углов,
                         и квадратуры помещения
@@ -69,24 +68,24 @@ const LightLines = () => {
                         <br/>
                         <h4>Общая стоимость: После снятия размеров и расчета нашим специалистом</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={lightLiBedroom} alt={"lightLiBedroom"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={lightLiBedroom} alt={"lightLiBedroom"}/>
                         <h3>Световые линии в спальне</h3>
                         <p>Считается индивидуально, цена зависит от длины линий, ширины линий, колличества углов,
                             и квадратуры помещения</p>
                         <br/>
                         <h4>Общая стоимость: После снятия размеров и расчета нашим специалистом</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={lightLiHallway} alt={"lightLiHallway"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={lightLiHallway} alt={"lightLiHallway"}/>
                         <h3>Световые линии в коридоре</h3>
                         <p>Считается индивидуально, цена зависит от длины линий, ширины линий, колличества углов,
                             и квадратуры помещения</p>
                         <br/>
                         <h4>Общая стоимость: После снятия размеров и расчета нашим специалистом</h4>
                     </div>
-                    <div className={classes.card}>
-                        <img className={classes.cardImg} src={lightLiKitchen} alt={"lightLiKitchen"}/>
+                    <div className={s.card}>
+                        <img className={s.cardImg} src={lightLiKitchen} alt={"lightLiKitchen"}/>
                         <h3>Световые линии в кухне</h3>
                         <p>Считается индивидуально, цена зависит от длины линий, ширины линий, колличества углов,
                             и квадратуры помещения</p>
@@ -98,5 +97,3 @@ const LightLines = () => {
         </div>
     )
 }
-
-export default LightLines

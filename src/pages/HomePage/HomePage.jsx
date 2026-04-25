@@ -1,14 +1,13 @@
-import content from "../assets/Images/contentImg.jpg";
-import React from "react";
-import classes from "./HomePage.module.css"
+import content from "../../assets/Images/contentImg.jpg";
+import s from "./HomePage.module.css"
 
 
-const HomePage = () => {
+export const HomePage = () => {
     return (
         <div>
-            <div className={classes.container}>
-                <img className={classes.content} src={content} alt={"content"}/>
-                <div className={classes.centered}>
+            <div className={s.container}>
+                <img className={s.content} src={content} alt={"content"}/>
+                <div className={s.centered}>
                     <h1>
                         Закажите Натяжные Потолки<br/>
                         в Старом осколе<br/>
@@ -22,5 +21,3 @@ const HomePage = () => {
         </div>
     )
 }
-
-export default HomePage;
