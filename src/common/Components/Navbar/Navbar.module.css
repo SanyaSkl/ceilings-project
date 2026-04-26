@@ -31,12 +31,14 @@
 .number {
     margin-left: 50px;
     font-weight: 600;
+    color: #8B0000FF;
     -webkit-text-stroke: 1px darkred;
 }
 
 .tagline {
     font-weight: 700;
     text-transform: uppercase;
+    color: #8c0101;
     -webkit-text-stroke: 1px red;
 }
 

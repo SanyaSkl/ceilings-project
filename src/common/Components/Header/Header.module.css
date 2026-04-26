@@ -1,14 +1,22 @@
 .logo {
-    width: 80px;
-    height: 80px;
-    padding: 10px;
-    margin:  50px ;
+    width: 60px;
+    height: 60px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2b9bbf;
+    height: 70px;
+    padding: 0 20px;
 }
 
 .textHeader {
     font-weight: 700;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px red;
+    color: #950505;
+    margin: 150px;
+    flex-grow: 1;
+    text-align: left;
 }
-
-
