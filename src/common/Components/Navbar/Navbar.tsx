@@ -1,6 +1,6 @@
 import s from "./Navbar.module.css";
 import {Link} from "react-router-dom";
-import phone from "../assets/Images/phone.png"
+import phone from "@assets/Images/phone.png"
 
 export const Navbar = () => {
     return (

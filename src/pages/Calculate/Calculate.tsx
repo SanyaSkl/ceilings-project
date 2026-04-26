@@ -14,8 +14,8 @@ export const Calculate = () => {
     const [porcelainTiles, setPorcelainTiles] = useState(0)
 
     // Константы
-    const BASE_PRICE = 450
-    const LAMP_PRICE = 400
+    const BASE_PRICE = 550
+    const LAMP_PRICE = 500
     const CHANDELIER_PRICE = 1000
     const PORCELAIN_PRICE = 500 // цена за м.п.
 
@@ -37,13 +37,13 @@ export const Calculate = () => {
             <div className="container">
                 <div className="heading">
                     <h1 className="heading-title">Калькулятор стоимости натяжного потолка</h1>
-                    <p className="heading-desc">Базовая цена: 1 м² = 450 рублей</p>
+                    <p className="heading-desc">Базовая цена: 1 м² = 550 рублей</p>
                 </div>
 
                 {/* Площадь */}
                 <div className="calc-section">
                     <label className="checkbox-wrapper title-bold section-title">
-                        <span className="title__inline">Площадь квартиры:</span>
+                        <span className="title__inline">Площадь помещения:</span>
                         <input
                             type="number"
                             min="0"
