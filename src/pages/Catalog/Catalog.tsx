@@ -1,53 +1,42 @@
 import s from "./Catalog.module.css"
-import {Link} from "react-router-dom";
-import matte from "../../assets/Images/matte/mat1.jpg"
-import glossy from "../../assets/Images/glossy/glossy1.jpg"
-import satin from "../../assets/Images/satin/sat1.jpg"
-import soaring from "../../assets/Images/soaring/soarHall.jpg"
-import twoLevel from "../../assets/Images/two-level/two-level1.jpg"
-import lightLines from "../../assets/Images/light lines/light lines1.jpg"
+import { Link } from "react-router-dom"
+import { useGetAllProductsQuery } from "@/features/ceilings/api/ceilingsApi"
+
+const typeNames: Record<string, string> = {
+    matte: "МАТОВЫЕ",
+    glossy: "ГЛЯНЦЕВЫЕ",
+    satin: "САТИНОВЫЕ",
+    soaring: "ПАРЯЩИЕ",
+    twoLevel: "ДВУХУРОВНЕВЫЕ",
+    lightLines: "СВЕТОВЫЕ ЛИНИИ",
+}
 
 export const Catalog = () => {
+    const { data: products, isLoading } = useGetAllProductsQuery()
+
+    if (isLoading) return <div style={{ textAlign: "center", marginTop: "50px" }}>Загрузка каталога...</div>
+
+    const previews = Object.keys(typeNames).map((type) => {
+        const firstProduct = products?.find((p) => p.type === type)
+        return {
+            type,
+            title: typeNames[type],
+            image: firstProduct?.imageUrl || "",
+        }
+    })
+
     return (
         <div>
             <h2 className={s.catalogHeader}>Каталог натяжных потолков</h2>
             <div className={s.cardsWrap}>
-                <Link to="/matte">
-                <div className={s.card}>
-                    <h3>МАТОВЫЕ</h3>
-                    <img className={s.cardImg} src={matte} alt={"matte"}/>
-                </div>
-                </Link>
-                <Link to="/glossy">
-                <div className={s.card}>
-                    <h3>ГЛЯНЦЕВЫЕ</h3>
-                    <img className={s.cardImg} src={glossy} alt={"glossy"}/>
-                </div>
+                {previews.map((preview) => (
+                    <Link key={preview.type} to={`/${preview.type}`}>
+                        <div className={s.card}>
+                            <h3>{preview.title}</h3>
+                            <img className={s.cardImg} src={preview.image} alt={preview.title} />
+                        </div>
                     </Link>
-                <Link to="/satin">
-                <div className={s.card}>
-                    <h3>САТИНОВЫЕ</h3>
-                    <img className={s.cardImg} src={satin} alt={"satin"}/>
-                </div>
-                    </Link>
-                <Link to="/soaring">
-                <div className={s.card}>
-                    <h3>ПАРЯЩИЕ</h3>
-                    <img className={s.cardImg} src={soaring} alt={"soaring"}/>
-                </div>
-                    </Link>
-                <Link to="/twoLevel">
-                <div className={s.card}>
-                    <h3>ДВУХУРОВНЕВЫЕ</h3>
-                    <img className={s.cardImg} src={twoLevel} alt={"two-level"}/>
-                </div>
-                    </Link>
-                <Link to="/lightLines">
-                <div className={s.card}>
-                    <h3>СВЕТОВЫЕ ЛИНИИ</h3>
-                    <img className={s.cardImg} src={lightLines} alt={"light lines"}/>
-                </div>
-                </Link>
+                ))}
             </div>
         </div>
     )
