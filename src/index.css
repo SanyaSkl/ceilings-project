@@ -9,10 +9,10 @@
     --header-bg: #2b9bbf; /* старый цвет – можно оставить, но для тёмной темы изменим */
     --header-text: #950505; /* красный – если хотим сделать его тоже зависящим от темы? */
     --navbar-bg: cadetblue; /* старый цвет */
-    --navbar-link: white;
-    --navbar-link-hover: red;
-    --navbar-link-visited: aqua;
-    --navbar-number: #8B0000FF;
+    --navbar-link: #66ff00;
+    --navbar-link-hover: #ff0000;
+    --navbar-link-visited: #ff0000;
+    --navbar-number: #ba0000;
     --navbar-tagline: #8c0101;
 }
 
@@ -24,13 +24,13 @@
     --bg-paper: #2c2c2c;
 
     --header-bg: #1f5a6e; /* более тёмный синий */
-    --header-text: #ffaaaa; /* светлый красный на тёмном фоне */
+    --header-text: #a19cf4; /* светлый красный на тёмном фоне */
     --navbar-bg: #2c4f4f; /* тёмный кадетский синий */
-    --navbar-link: #e0e0e0;
-    --navbar-link-hover: #ff6b6b;
-    --navbar-link-visited: #8fcaca;
-    --navbar-number: #ff7f7f;
-    --navbar-tagline: #ff7f7f;
+    --navbar-link: #008db8;
+    --navbar-link-hover: #415dc3;
+    --navbar-link-visited: #a19cf4;
+    --navbar-number: #a19cf4;
+    --navbar-tagline: #a19cf4;
 }
 
 body {
