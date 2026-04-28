@@ -3,7 +3,8 @@ import { HomePage } from "@/pages/HomePage/HomePage"
 import { Catalog } from "@/pages/Catalog/Catalog"
 import { Calculate } from "@/pages/Calculate/Calculate"
 import { CeilingTypePage } from "@/features/ceilings/components/CeilingTypePage"
-import { PageNotFound } from "@/common/Components/PageNotFound/PageNotFound"
+import {PageNotFound} from "@/common/Components/PageNotFound/PageNotFound.tsx";
+
 
 export const Path = {
     Home: "/",
@@ -11,7 +12,7 @@ export const Path = {
     Catalog: "/catalog",
     Calculate: "/calculate",
     CeilingType: "/:type",
-    NotFound: "/*",
+    NotFound: "*",
 } as const
 
 export const Routing = () => {

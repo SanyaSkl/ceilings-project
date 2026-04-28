@@ -1,25 +1,41 @@
-import { useState } from 'react'
-import './Calculate.css'
+import { useState } from "react"
+import {
+    Container,
+    Paper,
+    Typography,
+    Slider,
+    TextField,
+    RadioGroup,
+    FormControlLabel,
+    Radio,
+    FormControl,
+    FormLabel,
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    Grid,
+    Box,
+    IconButton,
+} from "@mui/material"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import RestartAltIcon from "@mui/icons-material/RestartAlt"
 
 export const Calculate = () => {
-    // Состояния
     const [square, setSquare] = useState(0)
-    const [type, setType] = useState(1)           // 1: белый, 1.2: широкий/цветной, 1.5: BAUF
+    const [type, setType] = useState(1) // множитель: 1, 1.2, 1.3, 1.5
     const [lamps, setLamps] = useState(0)
-    const [lampType, setLampType] = useState(1)   // 1: классические, 1.38: с подсветкой, 1.5: споты
+    const [lampType, setLampType] = useState(1)
     const [chandeliers, setChandeliers] = useState(0)
-    const [chandelierType, setChandelierType] = useState(1) // 1: собранные, 1.5: несобранные
+    const [chandelierType, setChandelierType] = useState(1)
     const [furniture, setFurniture] = useState(false)
     const [ceramicTiles, setCeramicTiles] = useState(false)
     const [porcelainTiles, setPorcelainTiles] = useState(0)
 
-    // Константы
     const BASE_PRICE = 550
     const LAMP_PRICE = 500
     const CHANDELIER_PRICE = 1000
-    const PORCELAIN_PRICE = 500 // цена за м.п.
+    const PORCELAIN_PRICE = 500
 
-    // Расчёт
     const totalPrice = () => {
         let total = BASE_PRICE * square * type
         total += LAMP_PRICE * lamps * lampType
@@ -30,212 +46,225 @@ export const Calculate = () => {
         return total
     }
 
-    const formattedTotal = totalPrice().toLocaleString('ru')
+    const resetCalculator = () => {
+        setSquare(0)
+        setType(1)
+        setLamps(0)
+        setLampType(1)
+        setChandeliers(0)
+        setChandelierType(1)
+        setFurniture(false)
+        setCeramicTiles(false)
+        setPorcelainTiles(0)
+    }
+
+    const formattedTotal = totalPrice().toLocaleString("ru")
 
     return (
-        <div className="calc-wrapper">
-            <div className="container">
-                <div className="heading">
-                    <h1 className="heading-title">Калькулятор стоимости натяжного потолка</h1>
-                    <p className="heading-desc">Базовая цена: 1 м² = 550 рублей</p>
-                </div>
+        <Container maxWidth="md" sx={{ py: 4 }}>
+            <Paper elevation={3} sx={{ p: 3, mb: 4 }}>
+                <Typography variant="h4" align="center" gutterBottom>
+                    Калькулятор стоимости натяжного потолка
+                </Typography>
+                <Typography variant="subtitle1" align="center" color="text.secondary">
+                    Базовая цена: 1 м² = {BASE_PRICE} рублей
+                </Typography>
+            </Paper>
 
-                {/* Площадь */}
-                <div className="calc-section">
-                    <label className="checkbox-wrapper title-bold section-title">
-                        <span className="title__inline">Площадь помещения:</span>
-                        <input
+            {/* Площадь */}
+            <Paper sx={{ p: 2, mb: 2 }}>
+                <Typography variant="h6">Площадь помещения</Typography>
+                <Grid container spacing={2} alignItems="center">
+                    <Grid item xs>
+                        <Slider
+                            value={square}
+                            onChange={(_, val) => setSquare(val as number)}
+                            min={0}
+                            max={200}
+                            valueLabelDisplay="auto"
+                            size="small"
+                        />
+                    </Grid>
+                    <Grid item>
+                        <TextField
                             type="number"
-                            min="0"
-                            max="200"
                             value={square}
                             onChange={(e) => setSquare(Number(e.target.value))}
-                            className="title__inline input-short"
+                            size="small"
+                            sx={{ width: 100 }}
+                            InputProps={{ endAdornment: "м²" }}
                         />
-                        <span className="title__inline">м²</span>
-                    </label>
-                    <input
-                        type="range"
-                        className="range-input"
-                        min="0"
-                        max="200"
-                        value={square}
-                        onChange={(e) => setSquare(Number(e.target.value))}
-                    />
-                </div>
+                    </Grid>
+                </Grid>
+            </Paper>
 
-                {/* Тип полотна */}
-                <div className="calc-section">
-                    <h4 className="title-bold section-title">Тип полотна</h4>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="type" checked={type === 1} onChange={() => setType(1)} />
-                        <div className="title-lite">Матовый/Глянцевый/Сатин (Белый)</div>
-                    </label>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="type" checked={type === 1.2} onChange={() => setType(1.2)} />
-                        <div className="title-lite">
-                            Широкое полотно (от 3.5м в ширину)
-                            <span className="note">+20% к стоимости</span>
-                        </div>
-                    </label>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="type" checked={type === 1.2} onChange={() => setType(1.2)} />
-                        <div className="title-lite">
-                            Цветной
-                            <span className="note">+20% к стоимости</span>
-                        </div>
-                    </label>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="type" checked={type === 1.5} onChange={() => setType(1.5)} />
-                        <div className="title-lite">
-                            "BAUF" (Безопасно для здоровья)
-                            <span className="note">+50% к стоимости</span>
-                        </div>
-                    </label>
-                </div>
+            {/* Тип полотна */}
+            <Accordion defaultExpanded>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="h6">Тип полотна</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <FormControl>
+                        <RadioGroup value={type} onChange={(e) => setType(Number(e.target.value))}>
+                            <FormControlLabel value={1} control={<Radio />} label="Матовый/Глянцевый/Сатин (Белый)" />
+                            <FormControlLabel value={1.2} control={<Radio />} label="Широкое полотно (от 3.5м) +20%" />
+                            <FormControlLabel value={1.3} control={<Radio />} label="Цветной +20%" />
+                            <FormControlLabel value={1.5} control={<Radio />} label="BAUF (безопасный) +50%" />
+                        </RadioGroup>
+                    </FormControl>
+                </AccordionDetails>
+            </Accordion>
 
-                {/* Количество светильников */}
-                <div className="calc-section">
-                    <label className="checkbox-wrapper title-bold">
-                        <span className="title__inline">Количество светильников:</span>
-                        <input
-                            type="number"
-                            min="0"
-                            max="150"
-                            value={lamps}
-                            onChange={(e) => setLamps(Number(e.target.value))}
-                            className="title__inline input-short"
-                        />
-                        <span className="title__inline">Шт</span>
-                    </label>
-                    <p className="heading-desc">Светильник и лампочка не входят в стоимость</p>
-                    <input
-                        type="range"
-                        className="range-input"
-                        min="0"
-                        max="150"
-                        value={lamps}
-                        onChange={(e) => setLamps(Number(e.target.value))}
-                    />
-                </div>
-
-                {/* Тип светильников */}
-                <div className="calc-section">
-                    <h4 className="title-bold section-title">Тип светильников</h4>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="lampType" checked={lampType === 1} onChange={() => setLampType(1)} />
-                        <div className="title-lite">
-                            Классические
-                            <span className="note">диаметр монтажного отверстия не больше 90</span>
-                        </div>
-                    </label>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="lampType" checked={lampType === 1.38} onChange={() => setLampType(1.38)} />
-                        <div className="title-lite">
-                            С подсветкой
-                            <span className="note">Отдельное подключение (лампочка отдельно, подсветка отдельно)</span>
-                        </div>
-                    </label>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="lampType" checked={lampType === 1.5} onChange={() => setLampType(1.5)} />
-                        <div className="title-lite">Споты</div>
-                    </label>
-                </div>
-
-                {/* Количество люстр */}
-                <div className="calc-section">
-                    <label className="checkbox-wrapper title-bold">
-                        <span className="title__inline">Количество люстр:</span>
-                        <input
-                            type="number"
-                            min="0"
-                            max="15"
-                            value={chandeliers}
-                            onChange={(e) => setChandeliers(Number(e.target.value))}
-                            className="title__inline input-short"
-                        />
-                        <span className="title__inline">Шт</span>
-                    </label>
-                    <input
-                        type="range"
-                        className="range-input"
-                        min="0"
-                        max="15"
-                        value={chandeliers}
-                        onChange={(e) => setChandeliers(Number(e.target.value))}
-                    />
-                </div>
-
-                {/* Вид люстры */}
-                <div className="calc-section">
-                    <h4 className="title-bold section-title">Вид люстры</h4>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="chandelierType" checked={chandelierType === 1} onChange={() => setChandelierType(1)} />
-                        <div className="title-lite">
-                            Классические
-                            <span className="note">В собранном виде</span>
-                        </div>
-                    </label>
-                    <label className="radio-wrapper">
-                        <input type="radio" name="chandelierType" checked={chandelierType === 1.5} onChange={() => setChandelierType(1.5)} />
-                        <div className="title-lite">
-                            Классические
-                            <span className="note">Не собранные</span>
-                        </div>
-                    </label>
-                </div>
-
-                {/* Дополнительные опции */}
-                <div className="calc-section">
-                    <h4 className="title-bold section-title">Дополнительные опции</h4>
-                    <label className="radio-wrapper">
-                        <input type="checkbox" className="radio" checked={furniture} onChange={(e) => setFurniture(e.target.checked)} />
-                        <div className="title-lite">
-                            Мебелированное помещение
-                            <span className="note">+1000р.</span>
-                        </div>
-                    </label>
-                    <label className="radio-wrapper">
-                        <input type="checkbox" className="radio" checked={ceramicTiles} onChange={(e) => setCeramicTiles(e.target.checked)} />
-                        <div className="title-lite">
-                            Керамическая плитка на стенах
-                            <span className="note">+1500р.</span>
-                        </div>
-                    </label>
-
-                    <div className="calc-section">
-                        <label className="radio-wrapper">
-                            <input type="checkbox" className="radio" checked={porcelainTiles > 0} onChange={(e) => setPorcelainTiles(e.target.checked ? 1 : 0)} />
-                            <span className="title__inline">Керамогранитная плитка:</span>
-                            <input
-                                type="number"
-                                min="0"
-                                max="50"
-                                value={porcelainTiles}
-                                onChange={(e) => setPorcelainTiles(Number(e.target.value))}
-                                className="title__inline input-short"
+            {/* Светильники */}
+            <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="h6">Светильники</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Grid container spacing={2} alignItems="center">
+                        <Grid item xs>
+                            <Slider
+                                value={lamps}
+                                onChange={(_, val) => setLamps(val as number)}
+                                min={0}
+                                max={150}
+                                size="small"
+                                valueLabelDisplay="auto"
                             />
-                            <span className="title__inline">м.п.</span>
-                        </label>
-                        <input
-                            type="range"
-                            className="range-input"
-                            min="0"
-                            max="50"
-                            value={porcelainTiles}
-                            onChange={(e) => setPorcelainTiles(Number(e.target.value))}
-                        />
-                    </div>
-                </div>
+                        </Grid>
+                        <Grid item>
+                            <TextField
+                                type="number"
+                                value={lamps}
+                                onChange={(e) => setLamps(Number(e.target.value))}
+                                size="small"
+                                sx={{ width: 100 }}
+                                InputProps={{ endAdornment: "шт" }}
+                            />
+                        </Grid>
+                    </Grid>
+                    <Typography variant="caption" color="text.secondary" display="block" mt={1}>
+                        Светильник и лампочка не входят в стоимость
+                    </Typography>
+                    <FormControl sx={{ mt: 2 }}>
+                        <FormLabel>Тип светильников</FormLabel>
+                        <RadioGroup value={lampType} onChange={(e) => setLampType(Number(e.target.value))}>
+                            <FormControlLabel value={1} control={<Radio />} label="Классические" />
+                            <FormControlLabel value={1.38} control={<Radio />} label="С подсветкой" />
+                            <FormControlLabel value={1.5} control={<Radio />} label="Споты" />
+                        </RadioGroup>
+                    </FormControl>
+                </AccordionDetails>
+            </Accordion>
 
-                {/* Итоговая стоимость */}
-                <div className="calc-price">
-                    <div className="calc-price-title">Стоимость натяжного потолка:</div>
-                    <div className="calc-price-value">
-                        <span>{formattedTotal}</span> рублей
-                    </div>
-                </div>
-            </div>
-        </div>
+            {/* Люстры */}
+            <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="h6">Люстры</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Grid container spacing={2} alignItems="center">
+                        <Grid item xs>
+                            <Slider
+                                value={chandeliers}
+                                onChange={(_, val) => setChandeliers(val as number)}
+                                min={0}
+                                max={15}
+                                size="small"
+                                valueLabelDisplay="auto"
+                            />
+                        </Grid>
+                        <Grid item>
+                            <TextField
+                                type="number"
+                                value={chandeliers}
+                                onChange={(e) => setChandeliers(Number(e.target.value))}
+                                size="small"
+                                sx={{ width: 100 }}
+                                InputProps={{ endAdornment: "шт" }}
+                            />
+                        </Grid>
+                    </Grid>
+                    <FormControl sx={{ mt: 2 }}>
+                        <FormLabel>Вид люстры</FormLabel>
+                        <RadioGroup value={chandelierType} onChange={(e) => setChandelierType(Number(e.target.value))}>
+                            <FormControlLabel value={1} control={<Radio />} label="Классические (собранные)" />
+                            <FormControlLabel value={1.5} control={<Radio />} label="Классические (несобранные)" />
+                        </RadioGroup>
+                    </FormControl>
+                </AccordionDetails>
+            </Accordion>
+
+            {/* Дополнительные опции */}
+            <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="h6">Дополнительные опции</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Box>
+                        <FormControlLabel
+                            control={<Radio checked={furniture} onChange={() => setFurniture(!furniture)} />}
+                            label="Мебелированное помещение +1000р"
+                        />
+                        <FormControlLabel
+                            control={<Radio checked={ceramicTiles} onChange={() => setCeramicTiles(!ceramicTiles)} />}
+                            label="Керамическая плитка на стенах +1500р"
+                        />
+                        <Box sx={{ mt: 2 }}>
+                            <Typography variant="body2">Керамогранитная плитка:</Typography>
+                            <Grid container spacing={2} alignItems="center">
+                                <Grid item xs>
+                                    <Slider
+                                        value={porcelainTiles}
+                                        onChange={(_, val) => setPorcelainTiles(val as number)}
+                                        min={0}
+                                        max={50}
+                                        size="small"
+                                        valueLabelDisplay="auto"
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <TextField
+                                        type="number"
+                                        value={porcelainTiles}
+                                        onChange={(e) => setPorcelainTiles(Number(e.target.value))}
+                                        size="small"
+                                        sx={{ width: 100 }}
+                                        InputProps={{ endAdornment: "м.п." }}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </Box>
+                </AccordionDetails>
+            </Accordion>
+
+            {/* Итоговая цена */}
+            <Paper
+                elevation={6}
+                sx={{
+                    position: "sticky",
+                    bottom: 16,
+                    mt: 4,
+                    p: 2,
+                    bgcolor: "primary.main",
+                    color: "white",
+                    borderRadius: 3,
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                }}
+            >
+                <Typography variant="h6">Стоимость натяжного потолка:</Typography>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                    <Typography variant="h5" fontWeight="bold">
+                        {formattedTotal} руб.
+                    </Typography>
+                    <IconButton onClick={resetCalculator} color="inherit" aria-label="сбросить">
+                        <RestartAltIcon />
+                    </IconButton>
+                </Box>
+            </Paper>
+        </Container>
     )
 }

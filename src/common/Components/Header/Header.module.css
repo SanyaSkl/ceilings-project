@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #2b9bbf;
+    background-color: var(--header-bg, #2b9bbf);
     height: 70px;
     padding: 0 20px;
 }
@@ -15,7 +15,7 @@
 .textHeader {
     font-weight: 700;
     text-transform: uppercase;
-    color: #950505;
+    color: var(--header-text, #950505);
     margin: 150px;
     flex-grow: 1;
     text-align: left;

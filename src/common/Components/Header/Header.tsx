@@ -4,7 +4,8 @@ import {NavLink} from "react-router-dom";
 import {changeThemeModeAC, selectThemeMode} from "@/app/app-slice.ts";
 import {useDispatch} from "react-redux";
 import {Switch} from "@mui/material";
-import {useAppSelector} from "@/common/hooks/useAppSelector.ts";
+import {useAppSelector} from "@/common/hooks";
+
 
 
 export const Header = () => {

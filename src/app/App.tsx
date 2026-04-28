@@ -7,12 +7,17 @@ import {Header} from "@/common/Components/Header/Header"
 import {Navbar} from "@/common/Components/Navbar/Navbar"
 import {Routing} from "@/common/routing/Route"
 import {ErrorSnackbar} from "@/common/Components/ErrorSnackbar/ErrorSnackbar"
+import {useEffect} from "react";
 
 export const App = () => {
     const themeMode = useAppSelector(selectThemeMode)
     const status = useAppSelector(selectStatus)
 
     const theme = getTheme(themeMode)
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", themeMode);
+    }, [themeMode]);
 
     return (
         <ThemeProvider theme={theme}>

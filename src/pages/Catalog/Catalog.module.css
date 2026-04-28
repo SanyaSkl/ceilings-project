@@ -1,30 +1,52 @@
 .catalogHeader {
     text-align: center;
+    margin: 30px 0;
 }
 
 .cardsWrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
 }
 
 .card {
-    background: #FFFFFF;
-    border: 2px solid cadetblue;
+    background: var(--card-bg, #514f4f);
+    border: 2px solid #9e9e9e;
     border-radius: 15px;
     width: 330px;
-    padding: 46px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
+    transition: all 0.2s;
+}
+
+.card:hover {
+    border-color: rgba(48, 43, 191, 0.92);
+}
+
+/* Ссылка внутри карточки */
+.card a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+/* Заголовок – серый */
+.card h3 {
+    color: #2b9bbf;
+    margin-bottom: 15px;
+}
+
+/* Посещённая ссылка – светло-серая */
+.card a:visited h3 {
+    color: #2b98bf;
 }
 
 .cardImg {
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
     height: 200px;
-    margin: 10px;
-    padding: 0
+    object-fit: cover;
 }

@@ -1,6 +1,6 @@
 .nav {
     height: 50px;
-    background-color: cadetblue;
+    background-color: var(--navbar-bg, cadetblue);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -17,28 +17,28 @@
     align-items: center;
     margin-right: 25px;
     text-decoration: none;
-    color: white;
+    color: var(--navbar-link, white);
 }
 
 .navMenu:visited {
-    color: aqua;
+    color: var(--navbar-link-visited, aqua);
 }
 
 .navMenu:hover {
-    color: red;
+    color: var(--navbar-link-hover, red);
 }
 
 .number {
     margin-left: 50px;
     font-weight: 600;
-    color: #8B0000FF;
+    color: var(--navbar-number, #8B0000FF);
     -webkit-text-stroke: 1px darkred;
 }
 
 .tagline {
     font-weight: 700;
     text-transform: uppercase;
-    color: #8c0101;
+    color: var(--navbar-tagline, #8c0101);
     -webkit-text-stroke: 1px red;
 }
 

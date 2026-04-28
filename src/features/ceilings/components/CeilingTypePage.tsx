@@ -4,10 +4,16 @@ import {CeilingCard} from "./CeilingCard"
 import {CeilingCardSkeleton} from "./CeilingCardSkeleton"
 import {Container, Grid, Typography} from "@mui/material"
 import {ceilingTypesInfo} from "../data/mockData"
+import {PageNotFound} from "@/common/Components";
+
 
 export const CeilingTypePage = () => {
     const {type} = useParams<{ type: string }>()
     const {data: products, isLoading, error} = useGetProductsByTypeQuery(type || "")
+
+    if (!type || !ceilingTypesInfo[type]) {
+        return <PageNotFound />
+    }
 
     if (!type) return <div>Не указан тип потолка</div>
     if (error) return <div>Ошибка загрузки данных</div>
