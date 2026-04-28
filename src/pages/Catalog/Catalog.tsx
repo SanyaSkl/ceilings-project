@@ -1,6 +1,7 @@
 import s from "./Catalog.module.css"
-import { Link } from "react-router-dom"
-import { useGetAllProductsQuery } from "@/features/ceilings/api/ceilingsApi"
+import {Link} from "react-router-dom"
+import {useGetAllProductsQuery} from "@/features/ceilings/api/ceilingsApi"
+import {CatalogSkeleton} from "./CatalogSkeleton"
 
 const typeNames: Record<string, string> = {
     matte: "МАТОВЫЕ",
@@ -12,9 +13,9 @@ const typeNames: Record<string, string> = {
 }
 
 export const Catalog = () => {
-    const { data: products, isLoading } = useGetAllProductsQuery()
+    const {data: products, isLoading} = useGetAllProductsQuery()
 
-    if (isLoading) return <div style={{ textAlign: "center", marginTop: "50px" }}>Загрузка каталога...</div>
+    if (isLoading) return <CatalogSkeleton/>
 
     const previews = Object.keys(typeNames).map((type) => {
         const firstProduct = products?.find((p) => p.type === type)
@@ -33,7 +34,7 @@ export const Catalog = () => {
                     <Link key={preview.type} to={`/${preview.type}`}>
                         <div className={s.card}>
                             <h3>{preview.title}</h3>
-                            <img className={s.cardImg} src={preview.image} alt={preview.title} />
+                            <img className={s.cardImg} src={preview.image} alt={preview.title}/>
                         </div>
                     </Link>
                 ))}

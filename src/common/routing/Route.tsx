@@ -11,7 +11,7 @@ export const Path = {
     Catalog: "/catalog",
     Calculate: "/calculate",
     CeilingType: "/:type",
-    NotFound: "*",
+    NotFound: "/*",
 } as const
 
 export const Routing = () => {

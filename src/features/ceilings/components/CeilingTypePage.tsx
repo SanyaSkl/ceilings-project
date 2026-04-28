@@ -1,7 +1,8 @@
 import {useParams} from "react-router-dom"
 import {useGetProductsByTypeQuery} from "../api/ceilingsApi"
 import {CeilingCard} from "./CeilingCard"
-import {CircularProgress, Container, Grid, Typography} from "@mui/material"
+import {CeilingCardSkeleton} from "./CeilingCardSkeleton"
+import {Container, Grid, Typography} from "@mui/material"
 import {ceilingTypesInfo} from "../data/mockData"
 
 export const CeilingTypePage = () => {
@@ -9,7 +10,6 @@ export const CeilingTypePage = () => {
     const {data: products, isLoading, error} = useGetProductsByTypeQuery(type || "")
 
     if (!type) return <div>Не указан тип потолка</div>
-    if (isLoading) return <CircularProgress sx={{display: "block", mx: "auto", my: 4}}/>
     if (error) return <div>Ошибка загрузки данных</div>
 
     const info = ceilingTypesInfo[type]
@@ -19,15 +19,21 @@ export const CeilingTypePage = () => {
             <Typography variant="h4" align="center" gutterBottom>
                 {info?.header || type}
             </Typography>
-            <Typography variant="body1" component="p" sx={{mb: 4}}>
+            <Typography variant="body1" sx={{mb: 4}}>
                 {info?.description}
             </Typography>
             <Grid container spacing={3}>
-                {products?.map((product) => (
-                    <Grid size={{xs: 12, md: 6}} key={product.id}>
-                        <CeilingCard product={product}/>
-                    </Grid>
-                ))}
+                {isLoading
+                    ? Array.from({length: 4}).map((_, idx) => (
+                        <Grid item xs={12} md={6} key={idx}>
+                            <CeilingCardSkeleton/>
+                        </Grid>
+                    ))
+                    : products?.map((product) => (
+                        <Grid item xs={12} md={6} key={product.id}>
+                            <CeilingCard product={product}/>
+                        </Grid>
+                    ))}
             </Grid>
         </Container>
     )

@@ -38,7 +38,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "hall",
         title: "Матовый натяжной потолок в зале",
         description: "площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый; труба отопления - 2 шт",
-        price: 8500,
+        price: 13000,
         imageUrl: matHall,
     },
     {
@@ -47,7 +47,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "bedroom",
         title: "Матовый натяжной потолок в спальне",
         description: "площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый",
-        price: 6500,
+        price: 11500,
         imageUrl: matBedroom,
     },
     {
@@ -56,7 +56,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "hallway",
         title: "Матовый натяжной потолок в коридоре",
         description: "площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м; установка точечных светильников - 4 шт.; цвет - белый",
-        price: 6000,
+        price: 11500,
         imageUrl: matHallway,
     },
     {
@@ -65,7 +65,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "kitchen",
         title: "Матовый натяжной потолок в кухне",
         description: "площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 4 шт; цвет - белый",
-        price: 7500,
+        price: 12500,
         imageUrl: matKitchen,
     },
 
@@ -76,7 +76,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "hall",
         title: "Глянцевый натяжной потолок в зале",
         description: "площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый; труба отопления - 2 шт",
-        price: 8500,
+        price: 13000,
         imageUrl: glHall,
     },
     {
@@ -85,7 +85,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "bedroom",
         title: "Глянцевый натяжной потолок в спальне",
         description: "площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый",
-        price: 6500,
+        price: 11500,
         imageUrl: glBedroom,
     },
     {
@@ -94,7 +94,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "hallway",
         title: "Глянцевый натяжной потолок в коридоре",
         description: "площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м; установка точечных светильников - 4 шт.; цвет - белый",
-        price: 6000,
+        price: 11500,
         imageUrl: glHallway,
     },
     {
@@ -103,7 +103,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "kitchen",
         title: "Глянцевый натяжной потолок в кухне",
         description: "площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 4 шт; цвет - белый",
-        price: 7500,
+        price: 12500,
         imageUrl: glKitchen,
     },
 
@@ -114,7 +114,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "hall",
         title: "Сатиновый натяжной потолок в зале",
         description: "площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый; труба отопления - 2 шт",
-        price: 8500,
+        price: 13000,
         imageUrl: satHall,
     },
     {
@@ -123,7 +123,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "bedroom",
         title: "Сатиновый натяжной потолок в спальне",
         description: "площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый",
-        price: 6500,
+        price: 11500,
         imageUrl: satBedroom,
     },
     {
@@ -132,7 +132,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "hallway",
         title: "Сатиновый натяжной потолок в коридоре",
         description: "площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м; установка точечных светильников - 4 шт.; цвет - белый",
-        price: 6000,
+        price: 11500,
         imageUrl: satHallway,
     },
     {
@@ -141,7 +141,7 @@ export const mockProducts: CeilingProduct[] = [
         room: "kitchen",
         title: "Сатиновый натяжной потолок в кухне",
         description: "площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 4 шт; цвет - белый",
-        price: 7500,
+        price: 12500,
         imageUrl: satKitchen,
     },
 

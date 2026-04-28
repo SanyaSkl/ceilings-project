@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom"
 import Button from "@mui/material/Button"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 
 export const PageNotFound = () => {
     return (
-        <Container sx={{ textAlign: "center", py: 8 }}>
+        <Container sx={{textAlign: "center", py: 8}}>
             <Typography variant="h1" component="h1" gutterBottom>
                 404
             </Typography>
