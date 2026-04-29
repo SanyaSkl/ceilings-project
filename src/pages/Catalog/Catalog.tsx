@@ -1,6 +1,6 @@
 import s from "./Catalog.module.css"
 import {Link} from "react-router-dom"
-import {useGetAllProductsQuery} from "@/features/ceilings/api/ceilingsApi"
+import {useGetAllProductsQuery} from "@/entities/ceiling/model/ceilingsApi.ts"
 import {CatalogSkeleton} from "./CatalogSkeleton"
 
 const typeNames: Record<string, string> = {

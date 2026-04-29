@@ -1,12 +1,12 @@
-import {useAppSelector} from "@/common/hooks"
-import {selectStatus, selectThemeMode} from "./app-slice"
-import {getTheme} from "@/common/theme"
+import {useAppSelector} from "@/shared/hooks"
+import {selectStatus, selectThemeMode} from "./store/app-slice.ts"
+import {getTheme} from "@/shared/config"
 import {LinearProgress, ThemeProvider} from "@mui/material"
 import CssBaseline from "@mui/material/CssBaseline"
-import {Header} from "@/common/Components/Header/Header"
-import {Navbar} from "@/common/Components/Navbar/Navbar"
-import {Routing} from "@/common/routing/Route"
-import {ErrorSnackbar} from "@/common/Components/ErrorSnackbar/ErrorSnackbar"
+import {Header} from "@/widgets/Header/Header"
+import {Navbar} from "@/widgets/Navbar/Navbar"
+import {Routing} from "@/app/routing/Route"
+import {ErrorSnackbar} from "@/shared/ui/ErrorSnackbar/ErrorSnackbar"
 import {useEffect} from "react";
 
 export const App = () => {
