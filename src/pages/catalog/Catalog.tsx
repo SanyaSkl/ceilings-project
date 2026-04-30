@@ -3,6 +3,8 @@ import {Link} from "react-router-dom"
 import {useGetAllProductsQuery} from "@/entities/ceiling/model/ceilingsApi.ts"
 import {CatalogSkeleton} from "./CatalogSkeleton"
 import {EmptyState} from "@/shared/ui/EmptyState/EmptyState.tsx";
+import {ErrorState} from "@/shared/ui/ErrorState/ErrorState.tsx";
+import Button from "@mui/material/Button";
 
 const typeNames: Record<string, string> = {
     matte: "МАТОВЫЕ",
@@ -14,10 +16,17 @@ const typeNames: Record<string, string> = {
 }
 
 export const Catalog = () => {
-    const {data: products, isLoading, error} = useGetAllProductsQuery()
+    const {data: products, isLoading, error, refetch} = useGetAllProductsQuery()
 
     if (isLoading) return <CatalogSkeleton/>
-    if (error) return <div>Ошибка загрузки</div>
+    if (error) return <ErrorState
+        message="Не удалось загрузить каталог потолков"
+        action={
+        <Button color="inherit" size="small" onClick={refetch}>
+            Повторить
+        </Button>
+    }
+    />
 
     if (!products || products.length === 0) {
         return <EmptyState/>
