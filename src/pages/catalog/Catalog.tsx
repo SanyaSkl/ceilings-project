@@ -2,6 +2,7 @@ import s from "./Catalog.module.css"
 import {Link} from "react-router-dom"
 import {useGetAllProductsQuery} from "@/entities/ceiling/model/ceilingsApi.ts"
 import {CatalogSkeleton} from "./CatalogSkeleton"
+import {EmptyState} from "@/shared/ui/EmptyState/EmptyState.tsx";
 
 const typeNames: Record<string, string> = {
     matte: "МАТОВЫЕ",
@@ -13,9 +14,14 @@ const typeNames: Record<string, string> = {
 }
 
 export const Catalog = () => {
-    const {data: products, isLoading} = useGetAllProductsQuery()
+    const {data: products, isLoading, error} = useGetAllProductsQuery()
 
     if (isLoading) return <CatalogSkeleton/>
+    if (error) return <div>Ошибка загрузки</div>
+
+    if (!products || products.length === 0) {
+        return <EmptyState/>
+    }
 
     const previews = Object.keys(typeNames).map((type) => {
         const firstProduct = products?.find((p) => p.type === type)

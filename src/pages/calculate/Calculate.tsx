@@ -1,12 +1,14 @@
 import {Container} from "@mui/material"
-import {useCalculator} from "./hooks/useCalculator"
-import {CalculatorHeader} from "./components/CalculatorHeader"
-import {AreaSelector} from "./components/AreaSelector"
-import {TypeSelector} from "./components/TypeSelector"
-import {LampsSelector} from "./components/LampsSelector"
-import {ChandeliersSelector} from "./components/ChandeliersSelector"
-import {AdditionalOptions} from "./components/AdditionalOptions"
-import {TotalPricePanel} from "./components/TotalPricePanel"
+import {
+    AdditionalOptions,
+    AreaSelector,
+    CalculatorHeader,
+    ChandeliersSelector,
+    LampsSelector, TotalPricePanel,
+    TypeSelector,
+    useCalculator
+} from "@/features/calculator";
+
 
 export const Calculate = () => {
     const {

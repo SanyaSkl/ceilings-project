@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import { HomePage } from "@pages/home/HomePage.tsx"
-import { Catalog } from "@pages/Catalog/Catalog.tsx"
-import { Calculate } from "@pages/Calculate/Calculate.tsx"
-import { CeilingTypePage } from "@/features/ceiling-type/CeilingTypePage.tsx"
+import { Catalog } from "@pages/catalog/Catalog.tsx"
+import { Calculate } from "@pages/calculate/Calculate.tsx"
+import { CeilingTypePage } from "@pages/ceiling-type/CeilingTypePage.tsx"
 import {PageNotFound} from "@pages/PageNotFound/PageNotFound.tsx";
 
 

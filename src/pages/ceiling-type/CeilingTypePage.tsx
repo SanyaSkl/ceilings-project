@@ -1,10 +1,10 @@
 import {useParams} from "react-router-dom"
-import {CeilingCard} from "../../entities/ceiling/ui/CeilingCard.tsx"
 import {CeilingCardSkeleton} from "../../entities/ceiling/ui/CeilingCardSkeleton.tsx"
 import {Container, Grid, Typography} from "@mui/material"
 import {useGetProductsByTypeQuery} from "@/entities/ceiling/model/ceilingsApi.ts";
 import {ceilingTypesInfo} from "@/entities/ceiling/model/mockData.ts";
 import {PageNotFound} from "@pages/PageNotFound/PageNotFound.tsx";
+import {CeilingCard} from "@/entities/ceiling";
 
 
 

@@ -1,4 +1,4 @@
-import {baseApi} from "@/app/api/baseApi.ts"
+import {baseApi} from "@/shared/api/baseApi.ts"
 import type {CeilingProduct} from "./ceiling.types.ts"
 import {mockProducts} from "./mockData.ts"
 

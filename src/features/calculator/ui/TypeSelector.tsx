@@ -10,7 +10,7 @@ import {
     Box,
 } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-import { HelpPopover } from "./HelpPopover"
+import { HelpPopover } from "./HelpPopover.tsx"
 
 interface Props {
     value: number

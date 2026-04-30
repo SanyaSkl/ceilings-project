@@ -1,0 +1,5 @@
+export * from "./home/HomePage"
+export * from "@pages/catalog/Catalog"
+export * from "@pages/calculate/Calculate"
+export * from "./ceiling-type/CeilingTypePage"
+export * from "./PageNotFound/PageNotFound"

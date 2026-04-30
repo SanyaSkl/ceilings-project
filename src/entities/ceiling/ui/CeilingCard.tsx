@@ -1,5 +1,6 @@
 import s from "./CeilingCard.module.css"
-import type {CeilingProduct} from "../model/ceiling.types.ts"
+import {CeilingProduct} from "@/entities/ceiling";
+
 
 interface Props {
     product: CeilingProduct
