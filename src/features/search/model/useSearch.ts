@@ -1,4 +1,5 @@
-import { useState, useMemo } from "react"
+import {useMemo, useState} from "react"
+import {useDebounce} from "@/shared/hooks";
 
 type Item = {
     title: string
@@ -7,11 +8,16 @@ type Item = {
 export const useSearch = <T extends Item>(data: T[]) => {
     const [query, setQuery] = useState("")
 
+    const debouncedQuery = useDebounce(query, 500)
+
+
     const filtered = useMemo(() => {
+        console.log("query:", query)
+        console.log("debounced:", debouncedQuery)
         return data.filter((item) =>
-            item.title.toLowerCase().includes(query.toLowerCase())
+            item.title.toLowerCase().includes(debouncedQuery.toLowerCase())
         )
-    }, [data, query])
+    }, [data, debouncedQuery])
 
     return {
         query,
@@ -19,3 +25,4 @@ export const useSearch = <T extends Item>(data: T[]) => {
         filtered,
     }
 }
+
