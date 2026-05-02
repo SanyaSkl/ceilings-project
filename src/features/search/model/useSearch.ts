@@ -12,8 +12,6 @@ export const useSearch = <T extends Item>(data: T[]) => {
 
 
     const filtered = useMemo(() => {
-        console.log("query:", query)
-        console.log("debounced:", debouncedQuery)
         return data.filter((item) =>
             item.title.toLowerCase().includes(debouncedQuery.toLowerCase())
         )
