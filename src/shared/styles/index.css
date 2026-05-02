@@ -14,6 +14,8 @@
     --navbar-link-visited: #ff0000;
     --navbar-number: #ba0000;
     --navbar-tagline: #8c0101;
+    --input-bg: #ffffff;
+    --input-text: #000;
 }
 
 [data-theme="dark"] {
@@ -31,6 +33,8 @@
     --navbar-link-visited: #a19cf4;
     --navbar-number: #a19cf4;
     --navbar-tagline: #a19cf4;
+    --input-bg: #2a2a2a;
+    --input-text: #fff;
 }
 
 body {

@@ -16,9 +16,11 @@
     border-radius: 15px;
     width: 330px;
     padding: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     transition: all 0.2s;
 }
 
@@ -26,22 +28,15 @@
     border-color: rgba(48, 43, 191, 0.92);
 }
 
-/* Ссылка внутри карточки */
 .card a {
     text-decoration: none;
     color: inherit;
     width: 100%;
 }
 
-/* Заголовок – серый */
 .card h3 {
     color: #2b9bbf;
     margin-bottom: 15px;
-}
-
-/* Посещённая ссылка – светло-серая */
-.card a:visited h3 {
-    color: #2b98bf;
 }
 
 .cardImg {
@@ -49,4 +44,18 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.searchWrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.loadMore {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }

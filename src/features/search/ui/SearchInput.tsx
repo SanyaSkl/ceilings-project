@@ -10,11 +10,8 @@ export const SearchInput = ({ value, onChange }: Props) => {
             value={value}
             onChange={(e) => onChange(e.target.value)}
             style={{
-                padding: "10px",
-                width: "100%",
-                marginBottom: "20px",
-                borderRadius: "8px",
-                border: "1px solid #ccc",
+                background: "var(--input-bg)",
+                color: "var(--input-text)",
             }}
         />
     )

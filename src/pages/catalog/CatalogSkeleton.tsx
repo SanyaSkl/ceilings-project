@@ -8,7 +8,7 @@ export const CatalogSkeleton = () => {
             </div>
 
             <div className={s.cardsWrap}>
-                {Array.from({length: 6}).map((_, idx) => (
+                {Array.from({length: 3}).map((_, idx) => (
                     <div key={idx} className={s.card}>
                         <div
                             className="skeleton-shimmer"
