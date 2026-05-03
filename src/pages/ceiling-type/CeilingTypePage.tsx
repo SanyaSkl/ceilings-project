@@ -1,11 +1,9 @@
 import {useParams} from "react-router-dom"
-import {CeilingCardSkeleton} from "../../entities/ceiling/ui/CeilingCardSkeleton.tsx"
+import {CeilingCardSkeleton} from "../../entities/ceiling/ui/CeilingCardSkeleton"
 import {Container, Grid, Typography} from "@mui/material"
-import {useGetProductsByTypeQuery} from "@/entities/ceiling/model/ceilingsApi.ts";
-import {ceilingTypesInfo} from "@/entities/ceiling/model/mockData.ts";
-import {CeilingCard} from "@/entities/ceiling";
-import {PageNotFound} from "@/pages";
-
+import {useGetProductsByTypeQuery} from "@/entities/ceiling/model/ceilingsApi"
+import {CeilingCard, ceilingTypesInfo} from "@/entities/ceiling"
+import {PageNotFound} from "@/pages"
 
 export const CeilingTypePage = () => {
     const {type} = useParams<{ type: string }>()
@@ -15,7 +13,6 @@ export const CeilingTypePage = () => {
         return <PageNotFound/>
     }
 
-    if (!type) return <div>Не указан тип потолка</div>
     if (error) return <div>Ошибка загрузки данных</div>
 
     const info = ceilingTypesInfo[type]

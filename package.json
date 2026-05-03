@@ -1,6 +1,8 @@
 {
   "scripts": {
+    "server": "json-server --watch db.json --port 5000",
     "dev": "vite --port 3000",
+    "dev:full": "pnpm run server & pnpm run dev",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
