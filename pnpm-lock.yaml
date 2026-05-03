@@ -14,6 +14,9 @@ importers:
       '@emotion/styled':
         specifier: ^11.11.5
         version: 11.14.1(@emotion/react@11.14.0(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(react@18.3.1)
+      '@hookform/resolvers':
+        specifier: ^5.2.2
+        version: 5.2.2(react-hook-form@7.75.0(react@18.3.1))
       '@mui/icons-material':
         specifier: ^5.15.15
         version: 5.18.0(@mui/material@5.18.0(@emotion/react@11.14.0(@types/react@18.3.28)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.28)(react@18.3.1)
@@ -32,6 +35,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      react-hook-form:
+        specifier: ^7.75.0
+        version: 7.75.0(react@18.3.1)
       react-redux:
         specifier: ^9.1.0
         version: 9.2.0(@types/react@18.3.28)(react@18.3.1)(redux@5.0.1)
@@ -41,6 +47,9 @@ importers:
       react-router-dom:
         specifier: ^6.22.3
         version: 6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      zod:
+        specifier: ^4.4.2
+        version: 4.4.2
     devDependencies:
       '@types/react':
         specifier: ^18.2.66
@@ -408,6 +417,11 @@ packages:
     peerDependenciesMeta:
       '@noble/hashes':
         optional: true
+
+  '@hookform/resolvers@5.2.2':
+    resolution: {integrity: sha512-A/IxlMLShx3KjV/HeTcTfaMxdwy690+L/ZADoeaTltLx+CVuzkeVIPuybK3jrRfw7YZnmdKsVVHAlEPIAEUNlA==}
+    peerDependencies:
+      react-hook-form: ^7.55.0
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -1216,6 +1230,12 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
+  react-hook-form@7.75.0:
+    resolution: {integrity: sha512-Ovv94H+0p3sJ7B9B5QxPuCP1u8V/cHuVGyH55cSwodYDtoJwK+fqk3vjfIgSX59I2U/bU4z0nRJ9HMLpNiWEmw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -1465,6 +1485,9 @@ packages:
   yaml@1.10.3:
     resolution: {integrity: sha512-vIYeF1u3CjlhAFekPPAk2h/Kv4T3mAkMox5OymRiJQB0spDP10LHvt+K7G9Ny6NuuMAb25/6n1qyUjAcGNf/AA==}
     engines: {node: '>= 6'}
+
+  zod@4.4.2:
+    resolution: {integrity: sha512-IynmDyxsEsb9RKzO3J9+4SxXnl2FTFSzNBaKKaMV6tsSk0rw9gYw9gs+JFCq/qk2LCZ78KDwyj+Z289TijSkUw==}
 
 snapshots:
 
@@ -1783,6 +1806,11 @@ snapshots:
     optional: true
 
   '@exodus/bytes@1.15.0': {}
+
+  '@hookform/resolvers@5.2.2(react-hook-form@7.75.0(react@18.3.1))':
+    dependencies:
+      '@standard-schema/utils': 0.3.0
+      react-hook-form: 7.75.0(react@18.3.1)
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -2508,6 +2536,10 @@ snapshots:
       react: 18.3.1
       scheduler: 0.23.2
 
+  react-hook-form@7.75.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   react-is@16.13.1: {}
 
   react-is@17.0.2: {}
@@ -2718,3 +2750,5 @@ snapshots:
   yallist@3.1.1: {}
 
   yaml@1.10.3: {}
+
+  zod@4.4.2: {}

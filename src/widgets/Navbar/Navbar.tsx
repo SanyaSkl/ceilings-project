@@ -17,11 +17,7 @@ export const Navbar = () => {
                 <Button variant="contained" component={Link} to={Path.Calculate}>Калькулятор</Button>
                 <Button variant="contained" component={Link} to={Path.NotFound}>Фото</Button>
                 <Button variant="contained" component={Link} to={Path.NotFound}>Услуги</Button>
-
-                {/*<Link to="/catalog" className={s.navMenu}>Каталог</Link>*/}
-
-                {/*<Link to="/calculate" className={s.navMenu}>Калькулятор</Link>*/}
-
+                <Button variant="contained" component={Link} to={Path.OrderPage}>Заявка</Button>
             </div>
         </nav>
     )
