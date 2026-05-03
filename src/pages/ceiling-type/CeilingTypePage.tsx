@@ -3,9 +3,8 @@ import {CeilingCardSkeleton} from "../../entities/ceiling/ui/CeilingCardSkeleton
 import {Container, Grid, Typography} from "@mui/material"
 import {useGetProductsByTypeQuery} from "@/entities/ceiling/model/ceilingsApi.ts";
 import {ceilingTypesInfo} from "@/entities/ceiling/model/mockData.ts";
-import {PageNotFound} from "@pages/PageNotFound/PageNotFound.tsx";
 import {CeilingCard} from "@/entities/ceiling";
-
+import {PageNotFound} from "@/pages";
 
 
 export const CeilingTypePage = () => {
@@ -13,7 +12,7 @@ export const CeilingTypePage = () => {
     const {data: products, isLoading, error} = useGetProductsByTypeQuery(type || "")
 
     if (!type || !ceilingTypesInfo[type]) {
-        return <PageNotFound />
+        return <PageNotFound/>
     }
 
     if (!type) return <div>Не указан тип потолка</div>

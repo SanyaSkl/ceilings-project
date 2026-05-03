@@ -5,10 +5,10 @@ import {CatalogSkeleton} from "./CatalogSkeleton"
 import Button from "@mui/material/Button"
 import {useSearch} from "@/features/search/model/useSearch"
 import {usePagination} from "@/shared/hooks/usePagination"
-import {CatalogList} from "./CatalogCard/CatalogList.tsx"
+import {CatalogList} from "./ui/CatalogList.tsx"
 import {EmptyState} from "@/shared/ui/EmptyState/EmptyState.tsx";
 import {ErrorState} from "@/shared/ui/ErrorState/ErrorState.tsx";
-import {TextField} from "@mui/material";
+import {LinearProgress, TextField} from "@mui/material";
 
 const typeNames: Record<string, string> = {
     matte: "МАТОВЫЕ",
@@ -20,7 +20,7 @@ const typeNames: Record<string, string> = {
 }
 
 export const Catalog = () => {
-    const {data: products, isLoading, error, refetch} = useGetAllProductsQuery()
+    const {data: products, isLoading, isFetching, error, refetch} = useGetAllProductsQuery()
 
     const previews = useMemo(() => {
         return Object.keys(typeNames).map((type) => {
@@ -53,6 +53,7 @@ export const Catalog = () => {
 
     return (
         <div>
+            {isFetching && <LinearProgress sx={{mt: 1, mb: 1}}/>}
             <h2 className={s.catalogHeader}>Каталог натяжных потолков</h2>
 
             <div className={s.searchWrap}>
@@ -70,7 +71,9 @@ export const Catalog = () => {
 
             {hasMore && (
                 <div className={s.loadMore}>
-                    <button onClick={loadMore}>Показать ещё</button>
+                    <Button variant="contained" onClick={loadMore}>
+                        Показать ещё
+                    </Button>
                 </div>
             )}
         </div>
