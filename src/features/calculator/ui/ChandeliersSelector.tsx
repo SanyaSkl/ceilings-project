@@ -1,16 +1,16 @@
 import {
     Accordion,
-    AccordionSummary,
     AccordionDetails,
-    Typography,
+    AccordionSummary,
+    FormControl,
+    FormControlLabel,
+    FormLabel,
     Grid,
+    Radio,
+    RadioGroup,
     Slider,
     TextField,
-    FormControl,
-    FormLabel,
-    RadioGroup,
-    FormControlLabel,
-    Radio,
+    Typography,
 } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
@@ -21,12 +21,12 @@ interface Props {
     onTypeChange: (val: number) => void
 }
 
-export const ChandeliersSelector = ({ count, onCountChange, typeValue, onTypeChange }: Props) => {
+export const ChandeliersSelector = ({count, onCountChange, typeValue, onTypeChange}: Props) => {
     const handleSlider = (_: Event, val: number | number[]) => onCountChange(val as number)
 
     return (
         <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
                 <Typography variant="h6">Люстры</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -47,16 +47,16 @@ export const ChandeliersSelector = ({ count, onCountChange, typeValue, onTypeCha
                             value={count}
                             onChange={(e) => onCountChange(Number(e.target.value))}
                             size="small"
-                            sx={{ width: 100 }}
-                            InputProps={{ endAdornment: "шт" }}
+                            sx={{width: 100}}
+                            InputProps={{endAdornment: "шт"}}
                         />
                     </Grid>
                 </Grid>
-                <FormControl sx={{ mt: 2 }}>
+                <FormControl sx={{mt: 2}}>
                     <FormLabel>Вид люстры</FormLabel>
                     <RadioGroup value={typeValue} onChange={(e) => onTypeChange(Number(e.target.value))}>
-                        <FormControlLabel value={1} control={<Radio />} label="Классические (собранные)" />
-                        <FormControlLabel value={1.5} control={<Radio />} label="Классические (несобранные)" />
+                        <FormControlLabel value={1} control={<Radio/>} label="Классические (собранные)"/>
+                        <FormControlLabel value={1.5} control={<Radio/>} label="Классические (несобранные)"/>
                     </RadioGroup>
                 </FormControl>
             </AccordionDetails>

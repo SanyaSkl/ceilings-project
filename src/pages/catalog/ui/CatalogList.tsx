@@ -1,6 +1,7 @@
 import s from "../Catalog.module.css"
 import {CatalogCard} from "@pages/catalog/CatalogCard/CatalogCard.tsx";
 
+
 type Item = {
     type: string
     title: string

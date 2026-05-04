@@ -1,4 +1,4 @@
-import content from "../../assets/Images/contentImg.jpg";
+import content from "../../../public/images/contentImg.jpg";
 import s from "./HomePage.module.css"
 
 

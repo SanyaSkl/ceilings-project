@@ -1,17 +1,17 @@
 import {
     Accordion,
-    AccordionSummary,
     AccordionDetails,
-    Typography,
+    AccordionSummary,
     Box,
+    Checkbox,
     FormControlLabel,
-    Radio,
     Grid,
     Slider,
     TextField,
+    Typography,
 } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-import { HelpPopover } from "./HelpPopover.tsx"
+import {HelpPopover} from "./HelpPopover.tsx"
 
 interface Props {
     furniture: boolean
@@ -35,23 +35,23 @@ export const AdditionalOptions = ({
 
     return (
         <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
                 <Typography variant="h6">Дополнительные опции</Typography>
             </AccordionSummary>
             <AccordionDetails>
                 <Box>
                     <FormControlLabel
-                        control={<Radio checked={furniture} onChange={() => setFurniture(!furniture)} />}
+                        control={<Checkbox checked={furniture} onChange={() => setFurniture(!furniture)}/>}
                         label="Мебелированное помещение +1000р"
                     />
                     <FormControlLabel
-                        control={<Radio checked={ceramicTiles} onChange={() => setCeramicTiles(!ceramicTiles)} />}
+                        control={<Checkbox checked={ceramicTiles} onChange={() => setCeramicTiles(!ceramicTiles)}/>}
                         label="Керамическая плитка на стенах +1500р"
                     />
-                    <Box sx={{ mt: 2 }}>
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                    <Box sx={{mt: 2}}>
+                        <Box sx={{display: "flex", alignItems: "center", gap: 1}}>
                             <Typography variant="body2">Керамогранитная плитка:</Typography>
-                            <HelpPopover text={helpPorcelain} />
+                            <HelpPopover text={helpPorcelain}/>
                         </Box>
                         <Grid container spacing={2} alignItems="center">
                             <Grid item xs>
@@ -70,8 +70,8 @@ export const AdditionalOptions = ({
                                     value={porcelainTiles}
                                     onChange={(e) => setPorcelainTiles(Number(e.target.value))}
                                     size="small"
-                                    sx={{ width: 100 }}
-                                    InputProps={{ endAdornment: "м.п." }}
+                                    sx={{width: 100}}
+                                    InputProps={{endAdornment: "м.п."}}
                                 />
                             </Grid>
                         </Grid>

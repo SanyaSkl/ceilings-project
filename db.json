@@ -7,7 +7,7 @@
       "title": "Матовый натяжной потолок в зале",
       "description": "площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый; труба отопления - 2 шт",
       "price": 13000,
-      "imageUrl": "/src/assets/Images/matte/matHall.jpg"
+      "imageUrl": "/images/matte/matHall.jpg"
     },
     {
       "id": "matte-bedroom",
@@ -16,7 +16,7 @@
       "title": "Матовый натяжной потолок в спальне",
       "description": "площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый",
       "price": 11500,
-      "imageUrl": "/src/assets/Images/matte/matBedroom.jpg"
+      "imageUrl": "/images/matte/matBedroom.jpg"
     },
     {
       "id": "matte-hallway",
@@ -25,7 +25,7 @@
       "title": "Матовый натяжной потолок в коридоре",
       "description": "площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м; установка точечных светильников - 4 шт.; цвет - белый",
       "price": 11500,
-      "imageUrl": "/src/assets/Images/matte/matHallway.jpg"
+      "imageUrl": "/images/matte/matHallway.jpg"
     },
     {
       "id": "matte-kitchen",
@@ -34,7 +34,7 @@
       "title": "Матовый натяжной потолок в кухне",
       "description": "площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 4 шт; цвет - белый",
       "price": 12500,
-      "imageUrl": "/src/assets/Images/matte/matKitchen.jpg"
+      "imageUrl": "/images/matte/matKitchen.jpg"
     },
     {
       "id": "glossy-hall",
@@ -43,7 +43,7 @@
       "title": "Глянцевый натяжной потолок в зале",
       "description": "площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый; труба отопления - 2 шт",
       "price": 13000,
-      "imageUrl": "/src/assets/Images/glossy/glHall.jpg"
+      "imageUrl": "/images/glossy/glHall.jpg"
     },
     {
       "id": "glossy-bedroom",
@@ -52,7 +52,7 @@
       "title": "Глянцевый натяжной потолок в спальне",
       "description": "площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый",
       "price": 11500,
-      "imageUrl": "/src/assets/Images/glossy/glBedroom.jpg"
+      "imageUrl": "/images/glossy/glBedroom.jpg"
     },
     {
       "id": "glossy-hallway",
@@ -61,7 +61,7 @@
       "title": "Глянцевый натяжной потолок в коридоре",
       "description": "площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м; установка точечных светильников - 4 шт.; цвет - белый",
       "price": 11500,
-      "imageUrl": "/src/assets/Images/glossy/glHallway.jpg"
+      "imageUrl": "/images/glossy/glHallway.jpg"
     },
     {
       "id": "glossy-kitchen",
@@ -70,7 +70,7 @@
       "title": "Глянцевый натяжной потолок в кухне",
       "description": "площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 4 шт; цвет - белый",
       "price": 12500,
-      "imageUrl": "/src/assets/Images/glossy/glKitchen.jpg"
+      "imageUrl": "/images/glossy/glKitchen.jpg"
     },
     {
       "id": "satin-hall",
@@ -79,7 +79,7 @@
       "title": "Сатиновый натяжной потолок в зале",
       "description": "площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый; труба отопления - 2 шт",
       "price": 13000,
-      "imageUrl": "/src/assets/Images/satin/satHall.jpg"
+      "imageUrl": "/images/satin/satHall.jpg"
     },
     {
       "id": "satin-bedroom",
@@ -88,7 +88,7 @@
       "title": "Сатиновый натяжной потолок в спальне",
       "description": "площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый",
       "price": 11500,
-      "imageUrl": "/src/assets/Images/satin/satBedroom.jpg"
+      "imageUrl": "/images/satin/satBedroom.jpg"
     },
     {
       "id": "satin-hallway",
@@ -97,7 +97,7 @@
       "title": "Сатиновый натяжной потолок в коридоре",
       "description": "площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м; установка точечных светильников - 4 шт.; цвет - белый",
       "price": 11500,
-      "imageUrl": "/src/assets/Images/satin/satHallway.jpg"
+      "imageUrl": "/images/satin/satHallway.jpg"
     },
     {
       "id": "satin-kitchen",
@@ -106,7 +106,7 @@
       "title": "Сатиновый натяжной потолок в кухне",
       "description": "площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 4 шт; цвет - белый",
       "price": 12500,
-      "imageUrl": "/src/assets/Images/satin/satKitchen.jpg"
+      "imageUrl": "/images/satin/satKitchen.jpg"
     },
     {
       "id": "soaring-hall",
@@ -115,7 +115,7 @@
       "title": "Парящий натяжной потолок в зале",
       "description": "площадь - 19 м2; обработка угла - 4 шт.; профиль - 18 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый; труба отопления - 2 шт",
       "price": 16300,
-      "imageUrl": "/src/assets/Images/soaring/soarHall.jpg"
+      "imageUrl": "/images/soaring/soarHall.jpg"
     },
     {
       "id": "soaring-bedroom",
@@ -124,7 +124,7 @@
       "title": "Парящий натяжной потолок в спальне",
       "description": "площадь - 11 м2; обработка угла - 4 шт.; профиль - 13 м; заготовка под люстру и установка люстры - 1 шт.; цвет - белый",
       "price": 11400,
-      "imageUrl": "/src/assets/Images/soaring/soarBadroom.jpg"
+      "imageUrl": "/images/soaring/soarBadroom.jpg"
     },
     {
       "id": "soaring-hallway",
@@ -133,7 +133,7 @@
       "title": "Парящий натяжной потолок в коридоре",
       "description": "площадь - 6.3 м2; обработка угла - 4 шт.; профиль - 12 м; установка точечных светильников - 4 шт.; цвет - белый",
       "price": 11200,
-      "imageUrl": "/src/assets/Images/soaring/soarHallway.jpg"
+      "imageUrl": "/images/soaring/soarHallway.jpg"
     },
     {
       "id": "soaring-kitchen",
@@ -142,7 +142,7 @@
       "title": "Парящий натяжной потолок в кухне",
       "description": "площадь - 9 м2; обработка угла - 4 шт.; профиль - 11.6 м; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 4 шт; цвет - белый",
       "price": 12200,
-      "imageUrl": "/src/assets/Images/soaring/soarKitchen.jpg"
+      "imageUrl": "/images/soaring/soarKitchen.jpg"
     },
     {
       "id": "twoLevel-hall",
@@ -151,7 +151,7 @@
       "title": "Двухуровневый натяжной потолок в зале",
       "description": "площадь - 19 м2; обработка угла - 4 шт; профиль - 18 м; длина второго уровня - 12 м.п; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 8 шт; цвет - белый/белый; труба отопления - 2 шт",
       "price": 27400,
-      "imageUrl": "/src/assets/Images/two-level/twoLevHall.jpg"
+      "imageUrl": "/images/two-level/twoLevHall.jpg"
     },
     {
       "id": "twoLevel-bedroom",
@@ -160,7 +160,7 @@
       "title": "Двухуровневый натяжной потолок в спальне",
       "description": "площадь - 11 м2; обработка угла - 4 шт; профиль - 13 м; длина второго уровня - 6.5 м.п; заготовка под люстру и установка люстры - 1 шт; установка точечных светильников - 10 шт; цвет - белый/белый",
       "price": 17850,
-      "imageUrl": "/src/assets/Images/two-level/twoLevBedroom.jpg"
+      "imageUrl": "/images/two-level/twoLevBedroom.jpg"
     },
     {
       "id": "twoLevel-hallway",
@@ -169,7 +169,7 @@
       "title": "Двухуровневый натяжной потолок в коридоре",
       "description": "площадь - 6.3 м2; обработка угла - 8 шт; профиль - 12 м; длина второго уровня - 5.5 м.п; установка точечных светильников - 6 шт; цвет - белый/белый",
       "price": 13500,
-      "imageUrl": "/src/assets/Images/two-level/twoLevHallway.jpg"
+      "imageUrl": "/images/two-level/twoLevHallway.jpg"
     },
     {
       "id": "twoLevel-kitchen",
@@ -178,7 +178,7 @@
       "title": "Двухуровневый натяжной потолок в кухне",
       "description": "площадь - 12 м2; обработка угла - 8 шт.; профиль - 11.6 м; длина второго уровня - 4 м.п; заготовка под люстру и установка люстры - 1 шт.; установка точечных светильников - 5 шт; цвет - белый/белый",
       "price": 13800,
-      "imageUrl": "/src/assets/Images/two-level/twoLevKitchen.jpg"
+      "imageUrl": "/images/two-level/twoLevKitchen.jpg"
     },
     {
       "id": "lightLines-hall",
@@ -187,7 +187,7 @@
       "title": "Световые линии в зале",
       "description": "Считается индивидуально, цена зависит от длины линий, ширины линий, количества углов и квадратуры помещения",
       "price": 0,
-      "imageUrl": "/src/assets/Images/light lines/lightLiHall.jpg"
+      "imageUrl": "/images/light lines/lightLiHall.jpg"
     },
     {
       "id": "lightLines-bedroom",
@@ -196,7 +196,7 @@
       "title": "Световые линии в спальне",
       "description": "Считается индивидуально, цена зависит от длины линий, ширины линий, количества углов и квадратуры помещения",
       "price": 0,
-      "imageUrl": "/src/assets/Images/light lines/lightLiBedroom.jpg"
+      "imageUrl": "/images/light lines/lightLiBedroom.jpg"
     },
     {
       "id": "lightLines-hallway",
@@ -205,7 +205,7 @@
       "title": "Световые линии в коридоре",
       "description": "Считается индивидуально, цена зависит от длины линий, ширины линий, количества углов и квадратуры помещения",
       "price": 0,
-      "imageUrl": "/src/assets/Images/light lines/lightLiHallway.jpg"
+      "imageUrl": "/images/light lines/lightLiHallway.jpg"
     },
     {
       "id": "lightLines-kitchen",
@@ -214,7 +214,7 @@
       "title": "Световые линии в кухне",
       "description": "Считается индивидуально, цена зависит от длины линий, ширины линий, количества углов и квадратуры помещения",
       "price": 0,
-      "imageUrl": "/src/assets/Images/light lines/lightLiKitchen.jpg"
+      "imageUrl": "/images/light lines/lightLiKitchen.jpg"
     }
   ]
 }

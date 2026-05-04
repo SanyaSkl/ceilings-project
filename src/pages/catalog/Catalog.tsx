@@ -5,10 +5,10 @@ import {CatalogSkeleton} from "./CatalogSkeleton"
 import Button from "@mui/material/Button"
 import {useSearch} from "@/features/search/model/useSearch"
 import {usePagination} from "@/shared/hooks/usePagination"
-import {CatalogList} from "./ui/CatalogList.tsx"
 import {EmptyState} from "@/shared/ui/EmptyState/EmptyState.tsx";
 import {ErrorState} from "@/shared/ui/ErrorState/ErrorState.tsx";
 import {LinearProgress, TextField} from "@mui/material";
+import {CatalogList} from "@pages/catalog/ui/CatalogList.tsx";
 
 const typeNames: Record<string, string> = {
     matte: "МАТОВЫЕ",

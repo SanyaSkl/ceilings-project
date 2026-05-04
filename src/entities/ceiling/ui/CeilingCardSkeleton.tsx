@@ -15,7 +15,6 @@ export const CeilingCardSkeleton = () => {
 
             <CardContent>
                 <div className="skeleton-shimmer" style={{ height: 28, width: "70%", marginBottom: 12 }} />
-
                 <div className="skeleton-shimmer" style={{ height: 16, width: "100%", marginBottom: 6 }} />
                 <div className="skeleton-shimmer" style={{ height: 16, width: "95%", marginBottom: 6 }} />
                 <div className="skeleton-shimmer" style={{ height: 16, width: "90%", marginBottom: 16 }} />

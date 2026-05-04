@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import s from "./../Catalog.module.css"
-import { FavoriteButton } from "@/features/favorites/ui/FavoriteButton"
+import {FavoriteButton} from "@/features/favorites/ui/FavoriteButton.tsx";
+
 
 type Props = {
     type: string
