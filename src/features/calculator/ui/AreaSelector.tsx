@@ -1,5 +1,5 @@
 import { Paper, Typography, Slider, TextField, Grid } from "@mui/material"
-import React from "react";
+import React from "react"
 
 interface Props {
     value: number
@@ -8,11 +8,13 @@ interface Props {
 
 export const AreaSelector = ({ value, onChange }: Props) => {
     const handleSlider = (_: Event, newValue: number | number[]) => {
-        onChange(newValue as number)
+        const val = Array.isArray(newValue) ? newValue[0] : newValue
+        onChange(Math.max(0, val))
     }
 
     const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange(Number(e.target.value))
+        const val = Number(e.target.value)
+        onChange(isNaN(val) ? 0 : Math.max(0, val))
     }
 
     return (
@@ -37,6 +39,7 @@ export const AreaSelector = ({ value, onChange }: Props) => {
                         size="small"
                         sx={{ width: 100 }}
                         InputProps={{ endAdornment: "м²" }}
+                        inputProps={{ min: 0 }}
                     />
                 </Grid>
             </Grid>
