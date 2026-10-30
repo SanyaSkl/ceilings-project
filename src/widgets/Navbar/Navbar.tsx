@@ -18,6 +18,7 @@ export const Navbar = () => {
                 <Button variant="contained" component={Link} to={Path.NotFound}>Фото</Button>
                 <Button variant="contained" component={Link} to={Path.NotFound}>Услуги</Button>
                 <Button variant="contained" component={Link} to={Path.OrderPage}>Заявка</Button>
+
             </div>
         </nav>
     )
