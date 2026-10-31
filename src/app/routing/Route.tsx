@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import {Calculate, Catalog, CeilingTypePage, HomePage, PageNotFound} from "@/pages";
 import {OrderPage} from "@pages/Order/OrderPage.tsx";
+import {PhotosPage} from "@pages/photos/PhotosPage.tsx";
+import {ServicesPage} from "@pages/services/ServicesPage.tsx";
 
 export const Path = {
     Home: "/",
@@ -10,6 +12,8 @@ export const Path = {
     CeilingType: "/:type",
     NotFound: "*",
     OrderPage: "/order",
+    Photos: "/photos",
+    Services: "/services",
 } as const
 
 export const Routing = () => {
@@ -22,6 +26,8 @@ export const Routing = () => {
             <Route path={Path.CeilingType} element={<CeilingTypePage />} />
             <Route path={Path.NotFound} element={<PageNotFound />} />
             <Route path={Path.OrderPage} element={<OrderPage />} />
+            <Route path={Path.Photos} element={<PhotosPage />} />
+            <Route path={Path.Services} element={<ServicesPage />} />
         </Routes>
     )
 }
