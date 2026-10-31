@@ -1,13 +1,13 @@
 import {useAppSelector} from "@/shared/hooks"
 import {selectStatus, selectThemeMode} from "./store/app-slice.ts"
 import {getTheme} from "@/shared/config"
-import {LinearProgress, ThemeProvider} from "@mui/material"
+import {Box, LinearProgress, ThemeProvider} from "@mui/material"
 import CssBaseline from "@mui/material/CssBaseline"
-import {Header} from "@/widgets/Header/Header"
-import {Navbar} from "@/widgets/Navbar/Navbar"
 import {Routing} from "@/app/routing/Route"
 import {ErrorSnackbar} from "@/shared/ui/ErrorSnackbar/ErrorSnackbar"
 import {useEffect} from "react";
+import {Footer, Header, Navbar} from "@/widgets";
+
 
 export const App = () => {
     const themeMode = useAppSelector(selectThemeMode)
@@ -22,13 +22,18 @@ export const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline/>
-            <div style={{display: "flex", flexDirection: "column", minHeight: "100vh"}}>
-                <Header/>
-                <Navbar/>
-                {status === "loading" && <LinearProgress/>}
-                <Routing/>
-                <ErrorSnackbar/>
-            </div>
+            <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+                <Header />
+                <Navbar />
+                {status === "loading" && <LinearProgress />}
+
+                <Box component="main" sx={{ flex: 1 }}>
+                    <Routing />
+                </Box>
+
+                <Footer />
+                <ErrorSnackbar />
+            </Box>
         </ThemeProvider>
     )
 }

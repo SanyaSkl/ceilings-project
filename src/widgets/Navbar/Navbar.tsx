@@ -15,8 +15,8 @@ export const Navbar = () => {
                 <h2 className={s.tagline}>Мы едем к вашим соседям</h2>
                 <Button variant="contained" component={Link} to={Path.Catalog}>Каталог</Button>
                 <Button variant="contained" component={Link} to={Path.Calculate}>Калькулятор</Button>
-                <Button variant="contained" component={Link} to={Path.NotFound}>Фото</Button>
-                <Button variant="contained" component={Link} to={Path.NotFound}>Услуги</Button>
+                <Button variant="contained" component={Link} to={Path.Photos}>Фото</Button>
+                <Button variant="contained" component={Link} to={Path.Services}>Услуги</Button>
                 <Button variant="contained" component={Link} to={Path.OrderPage}>Заявка</Button>
 
             </div>

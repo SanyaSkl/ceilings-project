@@ -6,9 +6,9 @@
     --card-text: #000000;
     --bg-paper: #f5f5f5;
 
-    --header-bg: #2b9bbf; /* старый цвет – можно оставить, но для тёмной темы изменим */
-    --header-text: #950505; /* красный – если хотим сделать его тоже зависящим от темы? */
-    --navbar-bg: cadetblue; /* старый цвет */
+    --header-bg: #2b9bbf;
+    --header-text: #950505;
+    --navbar-bg: cadetblue;
     --navbar-link: #66ff00;
     --navbar-link-hover: #ff0000;
     --navbar-link-visited: #ff0000;
@@ -16,6 +16,12 @@
     --navbar-tagline: #8c0101;
     --input-bg: #ffffff;
     --input-text: #000;
+
+    --footer-bg: #1e293b;
+    --footer-text: #f8fafc;
+    --footer-link: #38bdf8;
+    --footer-link-hover: #bae6fd;
+    --footer-divider: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] {
@@ -25,9 +31,9 @@
     --card-text: #ffffff;
     --bg-paper: #2c2c2c;
 
-    --header-bg: #1f5a6e; /* более тёмный синий */
-    --header-text: #a19cf4; /* светлый красный на тёмном фоне */
-    --navbar-bg: #2c4f4f; /* тёмный кадетский синий */
+    --header-bg: #1f5a6e;
+    --header-text: #a19cf4;
+    --navbar-bg: #2c4f4f;
     --navbar-link: #008db8;
     --navbar-link-hover: #415dc3;
     --navbar-link-visited: #a19cf4;
@@ -35,13 +41,19 @@
     --navbar-tagline: #a19cf4;
     --input-bg: #2a2a2a;
     --input-text: #fff;
+
+    --footer-bg: #0f172a;
+    --footer-text: #cbd5e1;
+    --footer-link: #7dd3fc;
+    --footer-link-hover: #e0f2fe;
+    --footer-divider: rgba(255, 255, 255, 0.1);
 }
 
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: var(--bg-paper);
-    color: #000; /* MUI сам управляет цветом текста в своих компонентах, а для кастомных – используйте var() */
+    color: #000;
 }
 
 /* Базовые сбросы */
